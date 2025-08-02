@@ -1,16 +1,56 @@
-# ai_app
+# AI Sports Prediction App
 
-A new Flutter project.
+A Flutter application that predicts athlete fatigue and injury risks using machine learning models.
 
-## Getting Started
+## Project Structure
 
-This project is a starting point for a Flutter application.
+```
+ai_app/
+├── lib/           # Flutter application code
+└── BACKEND/       # Python Flask API
+```
 
-A few resources to get you started if this is your first Flutter project:
+## Quick Start
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### Flutter App
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+1. Install Flutter dependencies:
+```bash
+flutter pub get
+```
+
+2. Run the app:
+```bash
+flutter run
+```
+
+### Backend API
+
+The backend is a Flask API that serves two ML models:
+- Injury Risk Prediction
+- Fatigue Level Prediction
+
+#### Running Locally
+
+1. Install Python dependencies:
+```bash
+pip install flask torch joblib
+```
+
+2. Run the Flask app:
+```bash
+python app.py
+```
+
+Note: The backend is currently configured to run at `https://fatigue-injury.onrender.com`. If you want to run locally, update the `baseUrl` in `lib/api/prediction_api.dart`.
+
+
+
+## API Endpoints
+
+- `/predict-injury` - POST request for injury risk prediction
+- `/predict-fatigue` - POST request for fatigue level prediction
+
+## Deployment Note
+
+The Flask backend (`app.py`) is designed to be deployed on a service like Render or Heroku. Make sure the required model files (`injury_model.pth`, `fatigue_model.pth`, and their respective scalers) are included in your deployment.
