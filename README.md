@@ -20,10 +20,12 @@ flutter pub get
 ```
 
 2. Run the app:
+
 If you're using chrome, run the following command:
 ```bash
 flutter run -d chrome --web-browser-flag "--disable-web-security"
 ```
+
 If you're using a phone emulator, use this command:
 ```bash
 flutter run
