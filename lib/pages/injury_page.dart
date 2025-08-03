@@ -70,16 +70,10 @@ class _InjuryPageState extends State<InjuryPage> {
               onChanged: (value) => setState(() => trainingIntensity = value),
             ),
             const SizedBox(height: 16),
-
-            Text('BMI: ${bmi.toStringAsFixed(1)}'),
-            Slider(
-              value: bmi,
-              min: 15,
-              max: 35,
-              onChanged: (value) => setState(() => bmi = value),
-            ),
+            // -------------
+            // Your task: Add the slider for bmi here
+            // -------------
             const SizedBox(height: 32),
-
             ElevatedButton(
               onPressed: isLoading ? null : predictInjury,
               child: Text(isLoading ? 'Predicting...' : 'Predict Injury Risk'),
