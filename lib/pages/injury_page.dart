@@ -71,7 +71,8 @@ class _InjuryPageState extends State<InjuryPage> {
             ),
             const SizedBox(height: 16),
             // -------------
-            // Your task: Add the slider for bmi here
+            // Your task: Add the slider for BMI here
+            // Hint: BMI's value is between 15 and 35
             // -------------
             const SizedBox(height: 32),
             ElevatedButton(
